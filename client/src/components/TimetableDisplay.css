@@ -1,0 +1,185 @@
+.timetable-page {
+  min-height: calc(100vh - 200px);
+  padding: 40px 0;
+  background-color: var(--gray-100);
+}
+
+.timetable-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.timetable-header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: var(--text-black);
+}
+
+.timetable-info {
+  color: var(--gray-600);
+  font-size: 16px;
+}
+
+.section-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.section-tab {
+  padding: 10px 20px;
+  border: 2px solid var(--gray-300);
+  background: white;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.section-tab:hover {
+  background: var(--gray-100);
+  border-color: var(--gray-400);
+}
+
+.section-tab.active {
+  background: var(--text-black);
+  color: white;
+  border-color: var(--text-black);
+}
+
+.timetable-wrapper {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.timetable th,
+.timetable td {
+  border: 1px solid var(--gray-300);
+  padding: 12px;
+  text-align: center;
+}
+
+.timetable th {
+  background-color: var(--text-black);
+  color: white;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.time-cell {
+  background-color: var(--gray-100);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.lecture-cell {
+  background-color: #dbeafe;
+}
+
+.break-cell {
+  background-color: #d1fae5;
+}
+
+.lecture-slot strong {
+  color: var(--primary-blue);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.faculty-name {
+  font-size: 12px;
+  color: var(--gray-600);
+}
+
+.break-slot strong {
+  color: var(--success-green);
+}
+
+.empty-slot {
+  color: var(--gray-400);
+}
+
+.warning-box {
+  background-color: #fef3c7;
+  border: 2px solid #f59e0b;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.warnings-box {
+  background-color: #fef3c7;
+  border: 2px solid #f59e0b;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+.warnings-box h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #92400e;
+}
+
+.warnings-box ul {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.warnings-box li {
+  margin-bottom: 8px;
+  color: #78350f;
+}
+
+.warning-note {
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #92400e;
+  font-style: italic;
+}
+
+.timetable-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn-outline {
+  background: white;
+  color: var(--primary-blue, #2563eb);
+  border: 2px solid var(--primary-blue, #2563eb);
+}
+
+.btn-outline:hover {
+  background: var(--primary-blue, #2563eb);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .timetable-wrapper {
+    padding: 12px;
+  }
+
+  .timetable th,
+  .timetable td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
